@@ -6,27 +6,27 @@ const currentTime = moment().calendar();
 
 
 // Display the current date and day
-function displayDay() {
+setInterval(function displayDay() {
     let date = moment();
     currentDay.text(date.format("dddd, MMMM Do YYYY"));
-}
+}, 1000);
 
 // Dynamically generating the timeblocks as the user opens the website
-function generateTimeBlocks() {
-    // Looping through the officeHoursOfDay to create the layout and the content of the timeblocks
-    for (let i= 0; i<officeHoursOfDay.length; i++) {
-        const timeblockForm = $("<form data-content='officeHour' class='time-block row'></form>");
-        timeblocks.append(timeblockForm);
-        const officeHour = $("<div class='hour'></div>");
-        officeHour.text = officeHoursOfDay[i];
-        timeblockForm.append(officeHour);
-        const userEvent = $("<textarea class='description'></textarea>");
-        // userEvent.text = localStorage.getItem();
-        timeblockForm.append(userEvent);
-        const saveBtn = $("<button type='submit' class='saveBtn'><i class='fa-solid fa-floppy-disk'></i></button>");
-        timeblockForm.append(saveBtn);
-    };
-}
+// function generateTimeBlocks() {
+//     // Looping through the officeHoursOfDay to create the layout and the content of the timeblocks
+//     for (let i= 0; i<officeHoursOfDay.length; i++) {
+//         const timeblockForm = $("<form data-content=officeHours[i] class='time-block'></form>");
+//         timeblocks.append(timeblockForm);
+//         const officeHour = $("<div class='hour'></div>");
+//         officeHour.text = officeHoursOfDay[i];
+//         timeblockForm.append(officeHour);
+//         const userEvent = $("<textarea class='description'></textarea>");
+//         // userEvent.text = localStorage.getItem();
+//         timeblockForm.append(userEvent);
+//         const saveBtn = $("<button type='submit' class='saveBtn'><i class='fa-solid fa-floppy-disk'></i></button>");
+//         timeblockForm.append(saveBtn);
+//     };
+// }
 
-displayDay();
-generateTimeBlocks();
+
+// generateTimeBlocks();
