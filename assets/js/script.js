@@ -2,19 +2,24 @@
 const currentDay = $("#currentDay");
 currentDay.text(moment().format("dddd, MMMM Do YYYY"));
 const timeblocks = $("#timeblocks");
-const officeHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+// Transform time to number in order to make it comparable to number data
 const currentHour = eval(moment().format("HH"));
 const textAreas = $(".description");
 
-
+// Looping through all the hour elements to compare to the current time
 $(".hour").each(function() {
     let hour = $(this).text().split(":");
+    // If current hour equals to the hour in the actual table cell
+    // then change the background color to red
     if(currentHour === eval(hour[0])) {
         $(this).parent().addClass("present");
     } else {
+        // If the current hour is greater than the one in table cell
+        //  then change the background color to green
         if (currentHour < eval(hour[0])) {
         $(this).parent().addClass("future");
         $(this).parent().removeClass("present");
+        // Else change the background color to gray
         } else {
             $(this).parent().addClass("past");
             $(this).parent().removeClass("future");
@@ -23,13 +28,16 @@ $(".hour").each(function() {
 
 })
 
-// function changeColor(time) {
-//     for(let i = 0; i<officeHours.length;i++) {
-//         if ()
-//     }
-// }
+
+// Here comes the even listener for the submit button
+// And save the events into the local storage and fetch data from there
+timeblocks.submit(function(event) {
+  event.preventDefault();
+  if(event.)
+});
 
 
+// Clear the local storage at the end of the day
 
 
 
