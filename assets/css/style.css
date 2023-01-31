@@ -9,7 +9,7 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border: 1px solid black;
   padding: 10px;
 }
 
@@ -31,8 +31,8 @@ textarea {
 }
 
 .row {
-  white-space: pre-wrap;
-  height: 80px;
+  /* white-space: pre-wrap; */
+  height: 60px;
   border-top: 1px solid white;
 }
 
@@ -40,6 +40,8 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  border-bottom: 1px dashed #000000;
+  padding-right: 10px;
 }
 
 .past {
@@ -55,6 +57,13 @@ textarea {
 .future {
   background-color: #77dd77;
   color: white;
+}
+
+.btnContainer {
+  border-top: 1px dashed #000000;
+  border-bottom: 1px dashed #000000;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .saveBtn {

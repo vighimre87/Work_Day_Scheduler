@@ -5,8 +5,10 @@ const timeblocks = $("#timeblocks");
 // Transform time to number in order to make it comparable to number data
 const currentHour = eval(moment().format("HH"));
 const textAreas = $(".description");
+const saveBtn = $(".btn");
 
-// Looping through all the hour elements to compare to the current time
+setInterval(() => {
+    // Looping through all the hour elements to compare to the current time
 $(".hour").each(function() {
     let hour = $(this).text().split(":");
     // If current hour equals to the hour in the actual table cell
@@ -26,15 +28,24 @@ $(".hour").each(function() {
         }
     }
 
-})
+  });
+}, 1000);
 
 
 // Here comes the even listener for the submit button
 // And save the events into the local storage and fetch data from there
 timeblocks.submit(function(event) {
   event.preventDefault();
-  if(event.)
+  if(event.target === button) {
+
+  }
 });
+
+// function saveToLocalStorage() {
+//     let userEvent = ;
+    
+
+// }
 
 
 // Clear the local storage at the end of the day
