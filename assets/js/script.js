@@ -41,7 +41,7 @@ $(".btn").each(function() {
 })
 
 
-// Even listener for the submit button
+// Event listener for the submit button
 // And save the events into the local storage when we click the save button
 $(".btn").on("click",function(event) {
   event.preventDefault();
