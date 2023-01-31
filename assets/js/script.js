@@ -58,7 +58,14 @@ $(".description").each(function() {
 
 
 
-// TODO: Dinamically recreate the HTML layout
+// TODO
+// Dinamically recreate the HTML layout and make it prettier
+// Sort the buttons out with the icons
+// Create a button to clear all the textareas
+// Add keyboard events to the textareas as the user can hit enter as well
+// Maybe add some more functionality
+
+
 // Dynamically generating the timeblocks as the user opens the website
 // function generateTimeBlocks() {
 //     // Looping through the officeHoursOfDay to create the layout and the content of the timeblocks
