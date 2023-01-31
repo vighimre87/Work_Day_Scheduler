@@ -47,8 +47,8 @@ $(".btn").on("click",function(event) {
 
 
 $(".description").each(function() {
-  $(this).text = localStorage.getItem($(this).parent().siblings("td.hour").text().split(":")[0]);
-  console.log($(this).text());
+  let userEvent = $(this).text(JSON.parse(localStorage.getItem($(this).parent().siblings("td.hour").text().split(":")[0])));
+  console.log(userEvent);
 });
 
 
