@@ -10,7 +10,7 @@ It doesn't require any installation. As a user of the calendar app you will be a
 Please see a mockup image of the website below:
 
 
-<img src="assets/images/mockup-image.png" alt="Mockup image of the website" style="width:500px;"/>
+<img src="assets/images/mockup-image.png" alt="Mockup image of the website" style="width:500px; height:800px"/>
 
 
 Here is the link for the deployed webpage: https://vighimre87.github.io/Work_Day_Scheduler/
