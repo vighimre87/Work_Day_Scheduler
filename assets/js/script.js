@@ -34,10 +34,15 @@ $(".hour").each(function() {
   });
 }, 1000);
 
+// Add the icon into the button class
+$(".btn").each(function() {
+  let icon = $("<i class='fas fa-save text-xl'></i>");
+  $(this).append(icon);
+})
 
 
-// Here comes the even listener for the submit button
-// And save the events into the local storage and fetch data from there
+// Even listener for the submit button
+// And save the events into the local storage when we click the save button
 $(".btn").on("click",function(event) {
   event.preventDefault();
   let hour = $(this).parent().siblings("td.hour").text().split(":")[0];
@@ -45,17 +50,15 @@ $(".btn").on("click",function(event) {
   localStorage.setItem(hour, JSON.stringify(userEvent));
 });
 
-
+// Display the userEvent from localStorage
 $(".description").each(function() {
-  let userEvent = $(this).text(JSON.parse(localStorage.getItem($(this).parent().siblings("td.hour").text().split(":")[0])));
-  console.log(userEvent);
+  let userEvent = $(this).text(JSON.parse(localStorage.getItem($(this).parent().siblings("td.hour").text().split(":")[0])));;
 });
 
 
-// Clear the local storage at the end of the day
 
 
-
+// TODO: Dinamically recreate the HTML layout
 // Dynamically generating the timeblocks as the user opens the website
 // function generateTimeBlocks() {
 //     // Looping through the officeHoursOfDay to create the layout and the content of the timeblocks
