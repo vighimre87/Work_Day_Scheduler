@@ -7,6 +7,9 @@ const currentHour = eval(moment().format("HH"));
 const textAreas = $(".description");
 const saveBtn = $(".btn");
 
+
+
+
 setInterval(() => {
     // Looping through all the hour elements to compare to the current time
 $(".hour").each(function() {
@@ -32,20 +35,21 @@ $(".hour").each(function() {
 }, 1000);
 
 
+
 // Here comes the even listener for the submit button
 // And save the events into the local storage and fetch data from there
-timeblocks.submit(function(event) {
+$(".btn").on("click",function(event) {
   event.preventDefault();
-  if(event.target === button) {
-
-  }
+  let hour = $(this).parent().siblings("td.hour").text().split(":")[0];
+  let userEvent = $(this).parent().siblings("td").children("textarea.description").val();
+  localStorage.setItem(hour, JSON.stringify(userEvent));
 });
 
-// function saveToLocalStorage() {
-//     let userEvent = ;
-    
 
-// }
+$(".description").each(function() {
+  $(this).text = localStorage.getItem($(this).parent().siblings("td.hour").text().split(":")[0]);
+  console.log($(this).text());
+});
 
 
 // Clear the local storage at the end of the day

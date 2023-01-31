@@ -15,7 +15,7 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: transparent rgba(#06aed5, #77dd77, #445871, 0.8);
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -31,7 +31,7 @@ textarea {
 }
 
 .row {
-  /* white-space: pre-wrap; */
+  white-space: pre-wrap;
   height: 60px;
   border-top: 1px solid white;
 }
@@ -60,8 +60,6 @@ textarea {
 }
 
 .btnContainer {
-  border-top: 1px dashed #000000;
-  border-bottom: 1px dashed #000000;
   padding-left: 10px;
   padding-right: 10px;
 }
